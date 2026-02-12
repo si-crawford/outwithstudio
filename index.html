@@ -50,13 +50,31 @@
     }
 
     footer {
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 40px;
-      font-size: 14px;
-      font
-      color: #ddd;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 40px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* Left text */
+.footer-left {
+  max-width: 320px;
+  line-height: 1.6;
+}
+
+/* Space after first line */
+.footer-left .lead {
+  margin-bottom: 16px;
+}
+
+/* Right side group */
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
     footer div {
       max-width: 300px;
@@ -113,18 +131,21 @@
     </main>
 
     <footer>
-      <div>
-        <p>utwith is currently under construction.</p>
-        <p>While the site’s offline, you can find us on <br>
-        Instagram or drop us an email.</p>
-        <p>We look forward to sharing our work with you soon!</p>
-      </div>
-      <nav>
-        <a href="https://www.instagram.com/outwith_studio/" class="button" target="_blank">Instagram</a>
-      </nav>
-      <div>
-        outwith.studio@icloud.com
-      </div>
+  <div class="footer-left">
+    <p class="lead">Outwith is currently under construction.</p>
+    <p>
+      While the site’s offline, you can find us on <br>
+      Instagram or drop us an email.
+    </p>
+    <p>We look forward to sharing our work with you soon!</p>
+  </div>
+
+  <div class="footer-right">
+    <a href="https://www.instagram.com/outwith_studio/" class="button" target="_blank">
+      Instagram
+    </a>
+    <span>outwith.studio@icloud.com</span>
+  </div>
     </footer>
   </div>
 </body>
