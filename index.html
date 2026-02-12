@@ -23,17 +23,47 @@
       overflow-x: hidden;
     }
 
+    /* --- ANIMATIONS --- */
+
+    @keyframes fadeInDown {
+      from { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+    }
+
+    @keyframes fadeInUp {
+      from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+    }
+
+    /* --- HEADER --- */
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: top;
       padding-top: 40px;
       padding-bottom: 40px;
+      /* ✅ Animation for the logo */
+      animation: fadeInDown 1.2s ease-out forwards;
     }
 
     header img {
       height: 40px;
     }
+
+    /* --- MAIN --- */
 
     main img {
       display: block;
@@ -46,27 +76,18 @@
       overflow: hidden;
     }
 
-    /* --- FOOTER STYLES --- */
-
-    @keyframes footerFadeIn {
-      from { 
-        opacity: 0; 
-        transform: translateY(15px); 
-      }
-      to { 
-        opacity: 1; 
-        transform: translateY(0); 
-      }
-    }
+    /* --- FOOTER --- */
 
     footer {
       display: flex;
       justify-content: space-between;
-      align-items: flex-end; /* ✅ Aligns both blocks to the bottom */
+      align-items: flex-end;
       padding-bottom: 40px;
       font-size: 14px;
       color: #ddd;
-      animation: footerFadeIn 1.5s ease-out forwards;
+      /* ✅ Animation for the footer (starts slightly after the logo) */
+      opacity: 0;
+      animation: fadeInUp 1.2s ease-out 0.3s forwards;
     }
 
     .footer-left {
@@ -79,20 +100,24 @@
       margin-bottom: 16px;
     }
 
-    /* Ensures the very last line of text sits on the baseline */
+    .footer-left .lead {
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
     .footer-left p:last-child {
       margin-bottom: 0;
     }
 
     .footer-right {
       display: flex;
-      flex-direction: column; /* ✅ Stacks Instagram & Email */
-      align-items: flex-end;    /* ✅ Keeps them flush right */
+      flex-direction: column;
+      align-items: flex-end;
       gap: 12px;
       text-align: right;
     }
 
-    /* Email link styling */
     .email-link {
       color: #ddd;
       text-decoration: none;
@@ -163,7 +188,7 @@
           While the site’s offline, you can find us on <br>
           Instagram or drop us an email.
         </p>
-        <p>We look forward to sharing our work <br>with you soon!</p>
+        <p>We look forward to sharing our work with you soon!</p>
       </div>
 
       <div class="footer-right">
