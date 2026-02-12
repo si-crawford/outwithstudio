@@ -72,25 +72,23 @@
       padding-bottom: 40px;
       font-size: 14px;
       color: #ddd;
+      line-height: 1.8; /* ✅ Increased line-height for better readability */
       opacity: 0;
       animation: fadeInUp 1.2s ease-out 0.3s forwards;
     }
 
     .footer-left {
       max-width: 320px;
-      line-height: 1.6;
     }
 
     .footer-left p {
       margin-top: 0;
-      margin-bottom: 16px;
+      margin-bottom: 20px; /* Slightly more space between paragraphs */
     }
 
-    /* REFINED SEMIBOLD LINE */
     .footer-left .lead {
-      font-weight: 500; /* ✅ Refined weight (Medium) instead of Bold */
-      color: #f0f0f0;   /* Slightly softer than pure white */
-      margin-bottom: 16px;
+      font-weight: 500; /* ✅ Refined weight */
+      color: #f0f0f0;
     }
 
     .footer-left p:last-child {
@@ -101,7 +99,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 12px;
+      gap: 20px; /* ✅ Increased space between button and email */
       text-align: right;
     }
 
@@ -109,6 +107,7 @@
       color: #ddd;
       text-decoration: none;
       transition: color 0.3s;
+      letter-spacing: 0.02em; /* Subtle spacing for the email */
     }
 
     .email-link:hover {
@@ -117,12 +116,13 @@
 
     a.button {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 10px 24px; /* Slightly wider button */
       background-color: #FFFCF8;
       color: #191919;
       border-radius: 80px;
       text-decoration: none;
       font-size: 14px;
+      font-weight: 500; /* Matches the lead text weight */
       transition: background 0.3s, color 0.3s;
     }
 
@@ -143,12 +143,13 @@
       footer {
         flex-direction: column;
         align-items: flex-start;
-        gap: 32px;
+        gap: 40px;
       }
 
       .footer-right {
         align-items: flex-start;
         text-align: left;
+        gap: 16px; /* Slightly tighter on mobile */
       }
     }
   </style>
@@ -175,7 +176,7 @@
           While the site’s offline, you can find us on <br>
           Instagram or drop us an email.
         </p>
-        <p>We look forward to sharing our <br>work with you soon!</p>
+        <p>We look forward to sharing our work with you soon!</p>
       </div>
 
       <div class="footer-right">
